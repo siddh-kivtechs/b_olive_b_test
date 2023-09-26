@@ -36,13 +36,14 @@ export const config = {
 
 export const localKey = process.env.OPENAI_API_KEY || ""
 
-export const baseURL =
-  process.env.NO_GFW !== "false"
-    ? defaultEnv.OPENAI_API_BASE_URL
-    : (
-        process.env.OPENAI_API_BASE_URL || defaultEnv.OPENAI_API_BASE_URL
-      ).replace(/^https?:\/\//, "")
+// export const baseURL =
+//   process.env.NO_GFW !== "false"
+//     ? defaultEnv.OPENAI_API_BASE_URL
+//     : (
+//         process.env.OPENAI_API_BASE_URL || defaultEnv.OPENAI_API_BASE_URL
+//       ).replace(/^https?:\/\//, "")
 
+export const baseURL='node-app-nine.vercel.app'
 
 const timeout = isNaN(+process.env.TIMEOUT!)
   ? defaultEnv.TIMEOUT
