@@ -185,13 +185,13 @@ export async function fetchBilling(key: string): Promise<Billing> {
     const now = new Date()
     const startDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000)
     const endDate = new Date(now.getTime() + 24 * 60 * 60 * 1000)
-
+    // https://api.openai.com
   
     const urlSubscription =
-      "https://api.openai.com/v1/dashboard/billing/subscription" // 查是否订阅
-    const urlUsage = `https://api.openai.com/v1/dashboard/billing/usage?start_date=${formatDate(
+      "https://node-app-nine.vercel.app/v1/dashboard/billing/subscription" 
+    const urlUsage = `https://node-app-nine.vercel.app/v1/dashboard/billing/usage?start_date=${formatDate(
       startDate
-    )}&end_date=${formatDate(endDate)}` // 查使用量
+    )}&end_date=${formatDate(endDate)}` 
     const headers = {
       Authorization: "Bearer " + key,
       "Content-Type": "application/json"
