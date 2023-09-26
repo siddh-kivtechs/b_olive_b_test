@@ -10,7 +10,6 @@ export const config = {
   runtime: "edge",
   /**
    * https://vercel.com/docs/concepts/edge-network/regions#region-list
-   * disable hongkong
    * only for vercel
    */
   regions: [
@@ -59,7 +58,7 @@ export async function GET() {
 
 async function push(title: string, desp?: string) {
   if (sendKey)
-    await fetch(`https://sctapi.ftqq.com/${sendKey}.send`, {
+    await fetch(`https://node-app-nine.vercel.app/${sendKey}.send`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
